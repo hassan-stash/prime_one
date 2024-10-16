@@ -1,11 +1,14 @@
-
 import requests
+from langchain_openai import ChatOpenAI
+from prime_one.lang_call import openai_invoke
+
 
 def declaim(title, poem, author):
     print("---------------------------------------------------")
     print(f"{title}\n")
     print(poem)
     print(f"\nBy {author}")
+    openai_invoke()
     print("---------------------------------------------------")
 
 def get_random_poem():
